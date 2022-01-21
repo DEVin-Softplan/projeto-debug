@@ -1,8 +1,13 @@
-export const Exemplo3 = ({ setText }) => {
+export const Exemplo3 = () => {
+  const array = [...Array(400)].map((u, i) => i);
+
   return (
     <>
       <h3>Exemplo3</h3>
-      <button onClick={() => setText('teste')}>Alterar text</button>
+
+      {array.map((n) => (
+        <p key={n}>test {n}</p>
+      ))}
     </>
   );
 };
